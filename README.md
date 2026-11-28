@@ -121,3 +121,12 @@ This writes/overwrites `docs/index.html`. No browser/Playwright install needed.
 - This repo could be copied/adapted for other states by changing
   `STATE_ABBR` and `_ARKANSAS_LOCATION_RE` in `main.py`, and updating
   `PAGE_TITLE`.
+
+
+## On taildraggers.com (theme v4)
+
+Each run also writes `docs/listings.json`: the same listings, title, disclaimer and
+"Search more" buttons as `docs/index.html`, as data. The taildraggers.com child theme
+(v4+) reads it and shows the listings natively on the matching page, so the
+`<iframe>` is no longer needed (any iframe still pointing here is swapped for the
+native list automatically). `docs/index.html` is still produced exactly as before.
